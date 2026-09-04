@@ -19,8 +19,8 @@ public class Main {
             System.out.println("========================================");
             System.out.println("1. Agregar nuevo producto");
             System.out.println("2. Listar todos los productos");
-            System.out.println("3. Actualizar producto (Asignado a Pablo)");
-            System.out.println("4. Eliminar producto (Asignado a Compañero 3)");
+            System.out.println("3. Actualizar producto");
+            System.out.println("4. Eliminar producto");
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
 
