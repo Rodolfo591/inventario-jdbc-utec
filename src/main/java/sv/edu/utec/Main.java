@@ -1,3 +1,14 @@
+/**
+ * UNIVERSIDAD TECNOLÓGICA DE EL SALVADOR
+ * Facultad de Informática y Ciencias Aplicadas
+ * Asignatura: Programación III
+ * Proyecto: Sistema de Gestión de Inventario (JDBC + H2)
+ *
+ * Integrantes:
+ *  - Rodolfo Adalí Santamaría Castillo - 25-3822-2022
+ *  - Pablo Enrique Castro Vásquez - 25-2312-2022
+ *  - Joaquín Enrique Chávez Cuéllar - 25-4018-2018
+ */
 package sv.edu.utec;
 
 import sv.edu.utec.datos.ProductoDAO;
