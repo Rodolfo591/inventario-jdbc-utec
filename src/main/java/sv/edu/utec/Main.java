@@ -11,6 +11,10 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         ProductoDAO dao = new ProductoDAO();
         Scanner scanner = new Scanner(System.in);
+
+        // Asegura que la tabla de la base de datos exista al iniciar
+        dao.crearTabla();
+
         int opcion = 0;
 
         do {
@@ -68,11 +72,62 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("\n [Módulo de Actualización - Pendiente por Pablo]");
+                    System.out.println("\n--- ACTUALIZAR PRODUCTO ---");
+                    System.out.print("Ingrese el ID del producto a actualizar: ");
+                    int idActualizar = 0;
+                    if (scanner.hasNextInt()) {
+                        idActualizar = scanner.nextInt();
+                        scanner.nextLine();
+                    } else {
+                        System.out.println("⚠️ ID no válido. Operación cancelada.");
+                        scanner.nextLine();
+                        break;
+                    }
+
+                    System.out.print("Ingrese el nuevo nombre del producto: ");
+                    String nuevoNombre = scanner.nextLine();
+
+                    System.out.print("Ingrese la nueva cantidad: ");
+                    int nuevaCantidad = 0;
+                    if (scanner.hasNextInt()) {
+                        nuevaCantidad = scanner.nextInt();
+                        scanner.nextLine();
+                    } else {
+                        System.out.println("⚠️ Cantidad no válida. Operación cancelada.");
+                        scanner.nextLine();
+                        break;
+                    }
+
+                    Producto productoActualizar = new Producto(idActualizar, nuevoNombre, nuevaCantidad);
+                    boolean actualizado = dao.actualizar(productoActualizar);
+
+                    if (actualizado) {
+                        System.out.println("✅ Producto actualizado exitosamente.");
+                    } else {
+                        System.out.println("⚠️ No se encontró ningún producto con el ID: " + idActualizar);
+                    }
                     break;
 
                 case 4:
-                    System.out.println("\n [Módulo de Eliminación - Pendiente por Integrante 3]");
+                    System.out.println("\n--- ELIMINAR PRODUCTO ---");
+                    System.out.print("Ingrese el ID del producto a eliminar: ");
+                    int idEliminar = 0;
+                    if (scanner.hasNextInt()) {
+                        idEliminar = scanner.nextInt();
+                        scanner.nextLine();
+                    } else {
+                        System.out.println("⚠️ ID no válido. Operación cancelada.");
+                        scanner.nextLine();
+                        break;
+                    }
+
+                    boolean eliminado = dao.eliminar(idEliminar);
+
+                    if (eliminado) {
+                        System.out.println("✅ Producto eliminado exitosamente de la base de datos.");
+                    } else {
+                        System.out.println("⚠️ No se encontró ningún producto con el ID: " + idEliminar);
+                    }
                     break;
 
                 case 5:
