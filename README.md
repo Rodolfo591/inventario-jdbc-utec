@@ -1,6 +1,6 @@
 # Sistema de Gestión de Inventario (JDBC + H2)
 
-Proyecto desarrollado para la asignatura de **Programación III** en la **Universidad Tecnológica de El Salvador**. Consiste en un sistema de consola para la gestión de productos, utilizando el patrón de diseño DAO (Data Access Object), persistencia de datos con JDBC y la base de datos embebida H2.
+Sistema de gestión de inventarios basado en consola desarrollado con Java, JDBC y base de datos H2. Aplica la arquitectura DAO para realizar operaciones de creación, lectura, actualización y eliminación (CRUD) de productos.
 
 ---
 
