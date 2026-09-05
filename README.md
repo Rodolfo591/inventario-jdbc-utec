@@ -36,5 +36,17 @@ El sistema permite realizar el ciclo completo de operaciones **CRUD** sobre los 
 ## 📋 Requisitos Previos e Instalación
 
 1. Clonar el repositorio:
-   ```bash
-   git clone [https://github.com/Rodolfo591/inventario-jdbc-utec.git](https://github.com/Rodolfo591/inventario-jdbc-utec.git)
+   `git clone https://github.com/Rodolfo591/inventario-jdbc-utec.git`
+2. Abrir el proyecto en IntelliJ IDEA.
+3. Cargar las dependencias de Maven (`pom.xml`).
+4. Ejecutar la clase `Main.java` ubicada en `src/main/java/sv/edu/utec/Main.java`.
+
+---
+
+## 🤖 Uso de Inteligencia Artificial
+
+Para el desarrollo de este proyecto se utilizaron herramientas de Inteligencia Artificial (Gemini / ChatGPT) con los siguientes fines:
+
+* **Asistencia en lógica y depuración:** Consultas puntuales sobre el manejo de sintaxis en JDBC, estructuras de consultas SQL para H2 y manejo de excepciones (`SQLException`).
+* **Estructuración de documentación:** Apoyo en la redacción y formato del archivo `README.md` y organización del flujo de comandos Git.
+* **Validación de código:** Revisión del patrón DAO para asegurar buenas prácticas de programación en Java.
